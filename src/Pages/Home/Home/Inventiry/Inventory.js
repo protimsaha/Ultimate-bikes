@@ -10,7 +10,7 @@ const Inventory = () => {
     }, [])
     return (
 
-        <div className='container row mx-auto'>
+        <div className='container row mx-auto mb-5'>
             {
                 brands.map(brand => <Brand key={brand.id} brand={brand}></Brand>)
             }

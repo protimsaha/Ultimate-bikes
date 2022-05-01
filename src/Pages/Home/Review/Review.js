@@ -21,11 +21,14 @@ const Review = () => {
                     <h4 className='text-white'>Active Customers</h4>
                 </div>
                 <div className='col-md-3 col-sm-12  d-flex flex-column justify-content-center align-items-center'>
-                    <div className='my-icon text-center text-white'><h2 className='mt-3'>30+</h2></div>
+                    <div className='my-icon text-center text-white'>
+                        <h2 className='mt-3'>30+</h2></div>
                     <h4 className='text-white'>Import company</h4>
                 </div>
                 <div className='col-md-3 col-sm-12  d-flex flex-column justify-content-center align-items-center'>
-                    <h2 className='my-icon text-center text-white'>5 Acre</h2>
+                    <div className='my-icon text-center text-white'>
+                        <h2 className='mt-3'>5Acr</h2>
+                    </div>
                     <h4 className='text-white'>Warehouse Area</h4>
                 </div>
                 <div className='col-md-3 col-sm-12  d-flex flex-column justify-content-center align-items-center'>

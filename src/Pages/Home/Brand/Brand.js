@@ -9,8 +9,8 @@ const Brand = ({ brand }) => {
     return (
         <div data-aos-offset="200"
             data-aos-duration="1500" data-aos="zoom-in-up" data-aos-once="false" className=' col-md-6 col-sm-12 g-4'>
-            <div className='card my-card'>
-                <img className='img-fluid w-75 mx-auto' src={photo} alt="" />
+            <div className=' card my-card'>
+                <img className='img-fluid  b-img w-50 mx-auto' src={photo} alt="" />
                 <div className='text-white ms-3'>
                     <h3>{name}</h3>
                     <p>{des}</p>

@@ -1,10 +1,10 @@
 .my-card {
     border: 2px solid indigo;
     background-color: indigo;
-    /* margin: 0 auto; */
-    ;
+    height: 500px;
+    border-radius: 20px;
 }
 
-.my-card img {
-    width: 100%;
+.b-img {
+    min-height: 250px;
 }
