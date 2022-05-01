@@ -1,0 +1,59 @@
+.g-img {
+    width: 40px;
+}
+
+.google-box {
+    display: flex;
+    border: 2px solid lightgray;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 25px;
+    align-items: center;
+}
+
+.login-box {
+    box-shadow: 10px 10px 10px 10px rgba(128, 128, 128, 0.299);
+    height: 650px;
+    border-radius: 30px;
+    padding: 50px;
+}
+
+.link {
+    color: blue;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.form-input {
+    width: 80%;
+    margin: 0 auto;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.form-input:hover {
+    border-radius: 0;
+}
+
+.input-btn {
+    width: 20%;
+    margin: 0 auto;
+    border-radius: 7px;
+    background-color: rgb(17, 17, 128);
+    color: white;
+    padding: 5px 10px;
+}
+
+.input-btn:hover {
+    background-color: orangered;
+    color: black;
+}
+
+.devider {
+    height: 2px;
+}

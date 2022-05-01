@@ -1,0 +1,14 @@
+.extra {
+    border: 2px solid lightslategrey;
+    border-radius: 15px;
+}
+
+.des-img img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.devider {
+    background-color: orangered;
+    height: 2px;
+}

@@ -1,0 +1,19 @@
+.r-card {
+    background-color: #1a1b46;
+    /* height: 150px; */
+    border-radius: 15px;
+}
+
+.my-icon {
+    background-color: rgb(241, 191, 62);
+    color: #1a1b46;
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+}
+
+.m-text {
+    font-size: 50px;
+    color: rgb(248, 119, 72);
+    margin-bottom: 20px;
+}

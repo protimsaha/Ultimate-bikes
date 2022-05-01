@@ -1,0 +1,16 @@
+.my-nav {
+    background-color: darkblue;
+    height: 70px;
+}
+
+.to-link a {
+    text-decoration: none;
+    color: white;
+    margin-left: 15px;
+    font-size: 17px;
+}
+
+.to-link a:hover {
+    color: orange;
+    text-decoration: underline;
+}

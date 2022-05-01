@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "suzuki",
+        "photo": "https://cdn-0.motorcycle-logos.com/wp-content/uploads/2016/10/Yamaha-Motor-Logo.png",
+        "des": "lorem",
+        "price": 150,
+        "quantity": 10,
+        "supplierName": "Yamaha"
+    },
+    {
+        "id": 2,
+        "name": "suzuki",
+        "photo": "https://cdn-0.motorcycle-logos.com/wp-content/uploads/2016/10/Yamaha-Motor-Logo.png",
+        "des": "lorem",
+        "price": 150,
+        "quantity": 10,
+        "supplierName": "Yamaha"
+    },
+    {
+        "id": 3,
+        "name": "suzuki",
+        "photo": "https://cdn-0.motorcycle-logos.com/wp-content/uploads/2016/10/Yamaha-Motor-Logo.png",
+        "des": "lorem",
+        "price": 150,
+        "quantity": 10,
+        "supplierName": "Yamaha"
+    },
+    {
+        "id": 4,
+        "name": "suzuki",
+        "photo": "https://cdn-0.motorcycle-logos.com/wp-content/uploads/2016/10/Yamaha-Motor-Logo.png",
+        "des": "lorem",
+        "price": 150,
+        "quantity": 10,
+        "supplierName": "Yamaha"
+    },
+    {
+        "id": 5,
+        "name": "suzuki",
+        "photo": "https://cdn-0.motorcycle-logos.com/wp-content/uploads/2016/10/Yamaha-Motor-Logo.png",
+        "des": "lorem",
+        "price": 150,
+        "quantity": 10,
+        "supplierName": "Yamaha"
+    },
+    {
+        "id": 6,
+        "name": "suzuki",
+        "photo": "https://cdn-0.motorcycle-logos.com/wp-content/uploads/2016/10/Yamaha-Motor-Logo.png",
+        "des": "lorem",
+        "price": 150,
+        "quantity": 10,
+        "supplierName": "Yamaha"
+    }
+]
