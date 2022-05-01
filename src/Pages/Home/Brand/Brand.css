@@ -8,3 +8,14 @@
 .b-img {
     min-height: 250px;
 }
+
+.m-btn {
+    background-color: rgb(251, 91, 33);
+    font-size: 19px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.m-btn:hover {
+    width: 200px;
+}

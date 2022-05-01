@@ -18,6 +18,9 @@ const Brand = ({ brand }) => {
                     <h5>Quantity: {quantity}</h5>
                     <h4>{supplierName}</h4>
                 </div>
+                <div className='mx-auto '>
+                    <button className='btn  m-btn'>Update Now</button>
+                </div>
             </div>
         </div>
     );
