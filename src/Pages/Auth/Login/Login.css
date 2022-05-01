@@ -4,7 +4,7 @@
 
 .google-box {
     display: flex;
-    border: 2px solid lightgray;
+    border: 4px solid lightgray;
     justify-content: space-between;
     padding: 10px;
     border-radius: 25px;
@@ -16,6 +16,7 @@
     height: 650px;
     border-radius: 30px;
     padding: 50px;
+    background-color: wheat;
 }
 
 .link {

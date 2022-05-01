@@ -10,7 +10,7 @@ const Register = () => {
                 <input className='my-2 form-input' type="text" placeholder='Your name' />
                 <input className='my-2 form-input' type="email" name="email" id="" placeholder='Your email' />
                 <input className='my-2 form-input' type="password" name="password" id="" placeholder='Password' />
-                <input className='input-btn' type="submit" value="Register" />
+                <input className='input-btn w-50' type="submit" value="Register" />
             </form>
             <div className='d-flex w-100 mx-4 mt-3'>
                 <p>Already have an account?</p>

@@ -1,16 +1,36 @@
-.my-nav {
-    background-color: darkblue;
-    height: 70px;
-}
-
-.to-link a {
-    text-decoration: none;
+.my-link {
     color: white;
+    text-decoration: none;
+    font-size: 19px;
     margin-left: 15px;
-    font-size: 17px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
-.to-link a:hover {
-    color: orange;
+.my-link:hover {
+    color: darkorange;
     text-decoration: underline;
+}
+
+.header-img {
+    height: 80px;
+    border-radius: 10px;
+}
+
+#login-btn {
+    font-size: 19px;
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    background-color: rgb(34, 19, 134);
+    padding: 5px 15px;
+    color: white;
+    width: 80px;
+    border-radius: 12px;
+}
+
+#login-btn:hover {
+    background-color: darkorange;
+
 }
