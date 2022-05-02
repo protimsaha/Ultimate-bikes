@@ -2,10 +2,15 @@ import React from 'react';
 import './Brand.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useNavigate } from 'react-router-dom';
 AOS.init();
 
 const Brand = ({ brand }) => {
-    const { name, photo, des, price, quantity, supplierName } = brand
+
+
+
+    const navigate = useNavigate()
+    const { _id, name, photo, des, price, quantity, supplierName } = brand
     return (
         <div data-aos-offset="200"
             data-aos-duration="1500" data-aos="zoom-in-up" data-aos-once="false" className=' col-md-6 col-sm-12 g-4'>
@@ -19,7 +24,7 @@ const Brand = ({ brand }) => {
                     <h4>{supplierName}</h4>
                 </div>
                 <div className='mx-auto '>
-                    <button className='btn  m-btn'>Update Now</button>
+                    <button onClick={() => (navigate(`inventory/${_id}`) && (navigate(`inventory/inventory/${_id}`)))} className='btn  m-btn'>Update Now</button>
                 </div>
             </div>
         </div>
