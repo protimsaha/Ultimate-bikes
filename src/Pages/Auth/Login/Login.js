@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css'
-import { useAuthState, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useAuthState, useSignInWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../Firebase.init';
 import Loading from '../Loading';
 
@@ -14,10 +14,26 @@ const Login = () => {
     const [errorMessage, setErrorMessage] = useState('')
 
     const [user] = useAuthState(auth);
+
+    const [
+        signInWithEmailAndPassword,
+        emailUser,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
+
+
+    const handlelogInEmail = event => {
+        event.preventDefault()
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+        signInWithEmailAndPassword(email, password)
+    }
+
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     const [signInWithGithub, githubUser, githubLoading, githubError] = useSignInWithGithub(auth);
 
-    if (user || googleUser || githubUser) {
+    if (user || emailUser || googleUser || githubUser) {
         navigate(from, { replace: true } || '/')
     }
 
@@ -28,10 +44,13 @@ const Login = () => {
         return <Loading></Loading>
     }
 
+
+
+
     return (
         <div className='w-50 mx-auto my-5 login-box'>
             <h2 className='text-center my-4'>Please Login</h2>
-            <form className='d-flex flex-column my-4'>
+            <form onSubmit={handlelogInEmail} className='d-flex flex-column my-4'>
                 <input className='my-2 form-input' type="email" name="email" id="" placeholder='Your email' />
                 <input className='my-2 form-input' type="password" name="password" id="" placeholder='Password' />
                 <input className='input-btn w-50' type="submit" value="Login" />

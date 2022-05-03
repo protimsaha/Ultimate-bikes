@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../Firebase.init';
 import Loading from '../Loading';
 import './Register.css'
 
 const Register = () => {
     const navigate = useNavigate()
+    const location = useLocation()
     const [errorMessage, setErrorMessage] = useState('')
+    const from = location.state?.from?.pathname || '/'
+
     const [
         createUserWithEmailAndPassword,
         user,
@@ -24,7 +27,7 @@ const Register = () => {
     }
 
     if (user) {
-        navigate('/')
+        navigate(from, { replace: true } || '/')
     }
     if (loading) {
         return <Loading></Loading>

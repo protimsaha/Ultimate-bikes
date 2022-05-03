@@ -1,0 +1,17 @@
+.in-detail {
+    background-color: white;
+}
+
+.detail-card {
+    border-radius: 20px;
+}
+
+#inventory-u-btn {
+    border: none;
+    width: 150px;
+    height: 80px;
+    margin-left: 35px;
+    border-radius: 15px;
+    background-color: darkorange;
+    font-size: 20px;
+}
