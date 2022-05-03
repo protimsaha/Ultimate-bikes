@@ -1,0 +1,13 @@
+.not-text {
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    min-height: 230px;
+}
+
+.not-img img {
+    margin-top: 50px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}

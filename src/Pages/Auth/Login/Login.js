@@ -37,10 +37,10 @@ const Login = () => {
         navigate(from, { replace: true } || '/')
     }
 
-    if (googleError || githubError) {
+    if (googleError || githubError || error) {
         return setErrorMessage(googleError?.message || githubError?.message)
     }
-    if (googleLoading || githubLoading) {
+    if (googleLoading || githubLoading || loading) {
         return <Loading></Loading>
     }
 
