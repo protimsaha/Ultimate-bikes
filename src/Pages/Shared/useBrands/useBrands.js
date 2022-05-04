@@ -8,6 +8,6 @@ const useBrands = () => {
             .then(res => res.json())
             .then(data => setBrands(data))
     }, [])
-    return [brands]
+    return [brands, setBrands]
 }
 export default useBrands;

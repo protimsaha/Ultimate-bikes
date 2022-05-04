@@ -1,12 +1,16 @@
 .my-card {
     border: 2px solid indigo;
     background-color: indigo;
-    height: 500px;
+    height: 600px;
     border-radius: 20px;
 }
 
 .b-img {
     min-height: 250px;
+}
+
+.b-img img {
+    width: 250px;
 }
 
 .m-btn {
