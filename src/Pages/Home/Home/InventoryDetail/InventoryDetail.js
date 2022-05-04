@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-// import Loading from '../../../Auth/Loading';
+import { useParams, Link } from 'react-router-dom';
 import './InventoryDetail.css'
-const InventoryDetail = () => {
 
+
+const InventoryDetail = () => {
     const { id } = useParams()
     const [detail, setDetail] = useState({})
 
     const { name, photo, des, price, quantity, supplierName } = detail
-    // console.log(detail)
 
+    // Fetch data to get product detail by id
     useEffect(() => {
         const url = `http://localhost:5000/bikes/${id}`
         fetch(url)
@@ -20,10 +20,7 @@ const InventoryDetail = () => {
             })
     }, [id, quantity, detail])
 
-
-
-
-
+    // Delivery function added
     const handleAdd = (event) => {
         event.preventDefault()
         const number = event.target.number.value;
@@ -43,9 +40,9 @@ const InventoryDetail = () => {
             .then((response) => response.json())
             .then((json) => console.log(json));
         event.target.reset()
-
     }
 
+    // Import button functionality added
     const updateQuantity = () => {
         const updatedQuantity = quantity - 1
         const url = `http://localhost:5000/bikes/${id}`
@@ -67,7 +64,7 @@ const InventoryDetail = () => {
     return (
         <div className='my-4 container w-75'>
             <h2 className='my-4 text-center m-text'>Update Now</h2>
-            <div className=' detail-card in-detail '>
+            <div className='card detail-card in-detail '>
                 <div className='d-img mx-auto text-center'>
                     <img className='w-50 img-fluid' src={photo} alt="" />
                 </div>
@@ -78,7 +75,7 @@ const InventoryDetail = () => {
                     <h2>Quantity : <span className=' '>{quantity}</span></h2>
                     <p>{des}</p>
                 </div>
-                <div className='d-flex  justify-content-between '>
+                <div className='d-flex align-items-center justify-content-between '>
                     <button className='my-5' id='inventory-u-btn' onClick={updateQuantity}>Delivered</button>
 
                     <form className='my-5 me-5' onSubmit={handleAdd}>
@@ -87,6 +84,9 @@ const InventoryDetail = () => {
                         <br />
                         <input className='btn btn-success' type="submit" value="Import" />
                     </form>
+                </div>
+                <div className='mx-auto my-4' >
+                    <Link to='/manage-inventory ' className=' manage-inventory-btn '>Manage Inventory</Link>
                 </div>
             </div>
         </div>

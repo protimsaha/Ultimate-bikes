@@ -15,3 +15,14 @@
     background-color: darkorange;
     font-size: 20px;
 }
+
+.manage-inventory-btn {
+    padding: 10px 15px;
+    border: 2px solid darkblue;
+    border-radius: 15px;
+    background: linear-gradient(to right, rgb(192, 40, 192), rgb(246, 65, 155));
+    color: whitesmoke;
+    font-size: 20px;
+    text-decoration: none;
+    /* margin-bottom: 30px; */
+}
