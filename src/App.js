@@ -12,6 +12,7 @@ import NotFound from './Pages/Shared/NotFound/NotFound';
 import ManageInventory from './Pages/Home/ManageInventory/ManageInventory';
 import AddNewItem from './Pages/Home/Home/AddNewItem/AddNewItem';
 import MyItem from './Pages/Home/Home/MyItem/MyItem';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -32,12 +33,25 @@ function App() {
         }></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
-        <Route path='/manage-inventory' element={<ManageInventory></ManageInventory>}></Route>
-        <Route path='/add-new' element={<AddNewItem></AddNewItem>}></Route>
-        <Route path='/my-item' element={<MyItem></MyItem>}></Route>
+        <Route path='/manage-inventory' element={
+          <RequireAuth>
+            <ManageInventory></ManageInventory>
+          </RequireAuth>
+        }></Route>
+        <Route path='/add-new' element={
+          <RequireAuth>
+            <AddNewItem></AddNewItem>
+          </RequireAuth>
+        }></Route>
+        <Route path='/my-item' element={
+          <RequireAuth>
+            <MyItem></MyItem>
+          </RequireAuth>
+        }></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer />
     </div>
   );
 }
