@@ -11,16 +11,22 @@ const MyItem = () => {
     useEffect(() => {
         const getItem = async () => {
             const url = `http://localhost:5000/items?email=${email}`
-            const { data } = await axios.get(url, {
-                headers: {
-                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
-                }
-            })
-            setItems(data)
+            try {
+                const { data } = await axios.get(url, {
+                    headers: {
+                        authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                    }
+                })
+                setItems(data)
+            }
+            catch (error) {
+                console.log(error.message)
+            }
         }
+
         getItem()
 
-    }, [email])
+    }, [email, items])
 
     // delete methode
     const handleCancel = (id) => {
