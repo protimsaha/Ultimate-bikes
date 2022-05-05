@@ -27,6 +27,13 @@ const Header = () => {
                             <Link className="my-link" aria-current="page" to="/">Home</Link>
                             <Link className="my-link" to="/inventory">Inventory</Link>
                             {
+                                user && <>
+                                    <Link className="my-link" to="/manage-inventory">Manage Inventory</Link>
+                                    <Link className="my-link" to="/add-new">Add new item</Link>
+                                    <Link className="my-link" to="/my-item">My item</Link>
+                                </>
+                            }
+                            {
                                 user ? <button className='logout-btn' onClick={() => signOut(auth)}>Logout</button> :
                                     <Link id='login-btn' to="login">Login</Link>
                             }

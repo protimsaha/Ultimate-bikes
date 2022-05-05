@@ -1,6 +1,7 @@
 .my-card {
-    border: 2px solid indigo;
-    background-color: indigo;
+    border: 2px solid rgb(13, 0, 130);
+    background-color: #1f1248;
+    ;
     height: 600px;
     border-radius: 20px;
 }
