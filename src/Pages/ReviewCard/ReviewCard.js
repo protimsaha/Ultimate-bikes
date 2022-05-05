@@ -7,8 +7,13 @@ const ReviewCard = ({ reviewCard, handleDelete }) => {
 
     const { _id, photo, name, price, quantity } = reviewCard;
     return (
-        <div className='container'>
-            <div className="d-flex bd-highlight mb-3 review-card">
+        <div
+            data-aos="zoom-in"
+            data-aos-offset="200"
+            data-aos-duration="1500"
+            data-aos-once="false"
+            className='container'>
+            <div className="d-flex  bd-highlight mb-3 review-card">
                 <div className="p-2 bd-highlight review-img">
                     <img src={photo} alt="" />
                 </div>

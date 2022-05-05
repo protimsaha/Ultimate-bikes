@@ -4,6 +4,7 @@ import './Login.css'
 import { useAuthState, useSignInWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../Firebase.init';
 import Loading from '../Loading';
+import axios from 'axios';
 
 
 const Login = () => {
@@ -23,18 +24,21 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
 
 
-    const handlelogInEmail = event => {
+    const handlelogInEmail = async event => {
         event.preventDefault()
         const email = event.target.email.value;
         const password = event.target.password.value;
-        signInWithEmailAndPassword(email, password)
+        await signInWithEmailAndPassword(email, password)
+        const { data } = await axios.post('http://localhost:5000/login', { email });
+        localStorage.setItem('accessToken', data.accessToken)
+        navigate(from, { replace: true } || '/')
     }
 
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     const [signInWithGithub, githubUser, githubLoading, githubError] = useSignInWithGithub(auth);
 
     if (user || emailUser || googleUser || githubUser) {
-        navigate(from, { replace: true } || '/')
+        // navigate(from, { replace: true } || '/')
     }
 
     if (googleError || githubError || error) {

@@ -7,8 +7,6 @@ AOS.init();
 
 const Brand = ({ brand }) => {
 
-
-
     const navigate = useNavigate()
     const { _id, name, photo, des, price, quantity, supplierName } = brand
     return (

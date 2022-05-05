@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 import ReviewCard from '../../ReviewCard/ReviewCard';
 import '../../Shared/useBrands/useBrands'
 import useBrands from '../../Shared/useBrands/useBrands';
@@ -16,6 +17,7 @@ const ManageInventory = () => {
                 .then(res => res.json())
                 .then(data => {
                     const rest = brands.filter(brand => brand._id !== id)
+                    toast('Item Deleted!')
                     setBrands(rest)
                 })
         }
