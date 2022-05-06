@@ -6,6 +6,7 @@ import auth from '../../../Auth/Firebase.init';
 import './AddNewitem.css'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import PageTitle from '../../../Shared/PageTitle/PageTitle';
 
 const AddNewItem = () => {
     const [user] = useAuthState(auth)
@@ -31,6 +32,7 @@ const AddNewItem = () => {
     }
     return (
         <div className='w-50 mx-auto col-sm-12'>
+            <PageTitle title='Add New Item'></PageTitle>
             <h2 className='m-text text-center'>Add Your own Bike</h2>
             <form className='d-flex flex-column add-item-form' onSubmit={handleSubmit(onSubmit)}>
                 <input type='text' {...register("name")} placeholder='Name' required />

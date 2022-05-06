@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 import auth from '../Firebase.init';
 import Loading from '../Loading';
 import './Register.css'
@@ -16,7 +17,7 @@ const Register = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
 
     const hendleRegister = event => {
@@ -38,6 +39,7 @@ const Register = () => {
 
     return (
         <div className='w-50 mx-auto my-5 register-box'>
+            <PageTitle title='Register'></PageTitle>
             <h2 className='text-center my-4'>Please Register</h2>
             <form onSubmit={hendleRegister} className='d-flex flex-column my-4'>
                 <input className='my-2 form-input' type="text" placeholder='Your name' />
