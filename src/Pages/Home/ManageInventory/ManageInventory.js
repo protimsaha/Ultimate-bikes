@@ -11,8 +11,7 @@ const ManageInventory = () => {
     const handleDelete = id => {
         const confirm = window.confirm('Are you sure to delete?')
         if (confirm) {
-            const url = `http://localhost:5000/bikes/${id}`
-            fetch(url, {
+            fetch(`http://localhost:5000/bikes/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -20,7 +19,7 @@ const ManageInventory = () => {
                     const rest = brands.filter(brand => brand._id !== id)
                     toast('Item Deleted!')
                     setBrands(rest)
-                })
+                });
         }
 
     }

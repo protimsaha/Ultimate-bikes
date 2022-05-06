@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../Auth/Firebase.init';
 import PageTitle from '../../../Shared/PageTitle/PageTitle';
+import './MyItem.css'
 
 const MyItem = () => {
     const [user] = useAuthState(auth)
@@ -31,29 +32,31 @@ const MyItem = () => {
 
     // delete methode
     const handleCancel = (id) => {
-        console.log(id)
-        const url = `http://localhost:5000/items/${id}`
-        axios.delete(url)
+        // delete from all data
+        axios.delete(`http://localhost:5000/bikes/${id}`)
+            .then(res => console.log(res))
+        // delete from myitem
+        axios.delete(`http://localhost:5000/items/${id}`)
             .then(res => console.log(res))
     }
 
 
     return (
-        <div className=' container row mx-auto my-5'>
+        <div className='my-item container row mx-auto my-5'>
             <PageTitle title='My Items'></PageTitle>
             {
                 items.map(item =>
-                    <div key={item._id} className=' col-md-6 col-sm-12 g-4 my-5'>
+                    <div key={item._id} className=' col-md-4 col-sm-12 g-4 my-5'>
                         <div className=' card'>
-                            <div className='b-img w-50 mx-auto'>
-                                <img src={item.photo} alt="" />
+                            <div className='b-img w-100 mx-auto'>
+                                <img className='img-fluid' src={item.photo} alt="" />
                             </div>
                             <div className='bg-info w-100 '>
-                                <h3>{item.name}</h3>
-                                <p>Description: {item.des}</p>
-                                <h4>Price:{item.price}</h4>
-                                <h5>Quantity: {item.quantity}</h5>
-                                <h4>Supplier name:{item.supplierName}</h4>
+                                <h3 className='px-3 my-2'>{item.name}</h3>
+                                <p className='px-3 my-2'>Description: {item.des}</p>
+                                <h4 className='px-3 my-2'>Price:$ {item.price}</h4>
+                                <h5 className='px-3 my-2'>Quantity: {item.quantity}</h5>
+                                <h4 className='px-3 my-2'>Supplier name:{item.supplierName}</h4>
                             </div>
                             <div onClick={() => handleCancel(item._id)} className='text-center '>
                                 <button className=' btn btn-danger w-100'>Cancel</button>

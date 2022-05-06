@@ -70,7 +70,7 @@ const InventoryDetail = () => {
                 </div>
                 <div className='w-50 mx-auto d-flex flex-column align-items-start'>
                     <h2>Name: <span className=' '> {name}</span></h2>
-                    <h3>Price: <span className=' '>{price}</span> </h3>
+                    <h3>Price:$ <span className=' '>{price}</span> </h3>
                     <h3>Supplier name: <span className=' '>{supplierName}</span></h3>
                     <h2>Quantity : <span className=' '>{quantity}</span></h2>
                     <p>{des}</p>

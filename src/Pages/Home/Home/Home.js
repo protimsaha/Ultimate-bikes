@@ -5,6 +5,7 @@ import useBrands from '../../Shared/useBrands/useBrands';
 import Banner from '../Banner/Banner';
 import ShortDes from '../ShortDes/ShortDes';
 import './Home.css'
+import ReactLeaflet from './ReactLeaflet/ReactLeaflet';
 
 const Home = () => {
     const navigate = useNavigate()
@@ -40,6 +41,7 @@ const Home = () => {
                         </div>)
                 }
             </div>
+            <ReactLeaflet></ReactLeaflet>
         </>
     );
 };

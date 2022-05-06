@@ -11,7 +11,10 @@
 }
 
 .b-img img {
-    width: 250px;
+    width: 340px;
+    border-radius: 20px;
+    margin: 0 auto;
+    height: 270px;
 }
 
 .m-btn {

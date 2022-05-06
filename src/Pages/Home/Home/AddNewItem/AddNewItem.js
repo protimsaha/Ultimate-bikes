@@ -25,7 +25,6 @@ const AddNewItem = () => {
             .then(response => {
                 const { data } = response;
                 if (data.insertedId) {
-                    toast('Your Import Item added')
                     event.target.reset()
                 }
             })

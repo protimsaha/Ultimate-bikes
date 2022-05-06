@@ -22,7 +22,7 @@ const ReviewCard = ({ reviewCard, handleDelete }) => {
                         </div>
                         <div className="p-2 bd-highlight d-flex flex-column justify-content-center">
                             <h5>Name:{name}</h5>
-                            <p>Price:{price}</p>
+                            <p>Price:$ {price}</p>
                             <p>Quantity:{quantity}</p>
                         </div>
 
