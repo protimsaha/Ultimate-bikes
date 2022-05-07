@@ -24,13 +24,13 @@ const Home = () => {
                         <div data-aos-offset="200"
                             data-aos-duration="1500" data-aos="zoom-in-up" data-aos-once="false" className=' col-md-6 col-sm-12 g-4'>
                             <div className=' card my-card'>
-                                <div className=' b-img w-50 mx-auto'>
-                                    <img className='img-fluid' src={hBrand.photo} alt="" />
+                                <div className=' b-img w-100 my-4 text-center'>
+                                    <img className='img-fluid ' src={hBrand.photo} alt="" />
                                 </div>
                                 <div className='text-white ms-3'>
                                     <h3>{hBrand.name}</h3>
                                     <p>{hBrand.des}</p>
-                                    <h4>{hBrand.price}</h4>
+                                    <h4>Price:$ {hBrand.price}</h4>
                                     <h5>Quantity: {hBrand.quantity}</h5>
                                     <h4>{hBrand.supplierName}</h4>
                                 </div>

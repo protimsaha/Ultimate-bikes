@@ -7,32 +7,14 @@ Differences between Javascript and Node js are-
 2.We can add HTML  tags in javascript and run DOM in browser but in Node js we can not connect HTML tags with it.
 3.It is a programming language and it can run in any browser that has a browser engine , where node js is a JavaScript interpreter and environment with some valuable libraries that JavaScript programming can use directly.
 
-kawasaki https://cdn-0.motorcycle-logos.com/wp-content/uploads/2016/10/Yamaha-Motor-Logo.png
+What are the differences between sql and nosql databases?
 
-r15 https://imgdb.in/jPOW
+SQL databases are relational but NoSQL databases are non-relational.
+SQL databases use structured and have a predefined schema while NoSQL databases have dynamic schemas .SQL databases are vertically scaleable but NOSQL databases are horizontally scaleable.SQL databases are table-based but NOSQL databases are documents, key value stores.SQL databases are better for multi-row transaction but NSQL is better for JSON. Some SQL databases are ORACLE, MYSQL , some NOSQL databases are MongoDB , cassandra.
 
-bmw https://imgdb.in/jPOZ
+ What is the purpose of jwt and how does it work?
 
-h2r https://imgdb.in/jPP1
+ JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.
 
-panigale https://imgdb.in/jPP2
+Although JWTs can be encrypted to also provide secrecy between parties, we will focus on signed tokens. Signed tokens can verify the integrity of the claims contained within it, while encrypted tokens hide those claims from other parties. When tokens are signed using public/private key pairs, the signature also certifies that only the party holding the private key is the one that signed it.
 
-ktm https://imgdb.in/jPP3
-
-xmotion https://imgdb.in/jPP4
-
-repsol https://imgdb.in/jPP5
-
-cbr https://imgdb.in/jPP6
-
-ns https://imgdb.in/jPP7
-
-gxsr https://imgdb.in/jPP8
-
-enfield https://imgdb.in/jPPa
-
-sf https://imgdb.in/jPPb
-
-tvs https://imgdb.in/jPPc
-
-mt https://imgdb.in/jPPd

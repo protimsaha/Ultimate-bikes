@@ -49,7 +49,7 @@ const MyItem = () => {
                     <div key={item._id} className=' col-md-4 col-sm-12 g-4 my-5'>
                         <div className=' card'>
                             <div className='b-img w-100 mx-auto'>
-                                <img className='img-fluid' src={item.photo} alt="" />
+                                <img className='img-fluid w-100' src={item.photo} alt="" />
                             </div>
                             <div className='bg-info w-100 '>
                                 <h3 className='px-3 my-2'>{item.name}</h3>

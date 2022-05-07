@@ -62,23 +62,23 @@ const InventoryDetail = () => {
     }
 
     return (
-        <div className='my-4 container w-75'>
+        <div className='my-4 container '>
             <h2 className='my-4 text-center m-text'>Update Now</h2>
-            <div className='card detail-card in-detail '>
+            <div className='card detail-card  mx-auto'>
                 <div className='d-img mx-auto text-center'>
-                    <img className='w-50 img-fluid' src={photo} alt="" />
+                    <img className='w-75 img-fluid my-3' src={photo} alt="" />
                 </div>
-                <div className='w-50 mx-auto d-flex flex-column align-items-start'>
+                <div className='w-75 mx-auto d-flex flex-column align-items-start'>
                     <h2>Name: <span className=' '> {name}</span></h2>
                     <h3>Price:$ <span className=' '>{price}</span> </h3>
                     <h3>Supplier name: <span className=' '>{supplierName}</span></h3>
                     <h2>Quantity : <span className=' '>{quantity}</span></h2>
                     <p>{des}</p>
                 </div>
-                <div className='d-flex align-items-center justify-content-between '>
+                <div className='d-flex w-100 justify-content-around align-items-center'>
                     <button className='my-5' id='inventory-u-btn' onClick={updateQuantity}>Delivered</button>
 
-                    <form className='my-5 me-5' onSubmit={handleAdd}>
+                    <form className='my-5 ms-4' onSubmit={handleAdd}>
                         <h3 className='text-warning'>Import now</h3>
                         <input type="number" className='form-input my-2' name="number" placeholder='Imported Quantity' />
                         <br />
