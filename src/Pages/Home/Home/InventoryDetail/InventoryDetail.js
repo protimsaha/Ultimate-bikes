@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import './InventoryDetail.css'
 
 
@@ -16,7 +17,6 @@ const InventoryDetail = () => {
             .then(res => res.json())
             .then(data => {
                 setDetail(data)
-                // console.log(detail)
             })
     }, [id, quantity, detail])
 
@@ -24,41 +24,49 @@ const InventoryDetail = () => {
     const handleAdd = (event) => {
         event.preventDefault()
         const number = event.target.number.value;
-        const newNumber = Number(number) + (quantity)
-        const url = `https://salty-mountain-12795.herokuapp.com/bikes/${id}`
+        if (number >= 0) {
+            const newNumber = Number(number) + (quantity)
+            const url = `https://salty-mountain-12795.herokuapp.com/bikes/${id}`
 
-        fetch(url, {
-            method: 'PUT',
-            headers: {
-                'content-type': 'application/json',
-            },
-            body: JSON.stringify({
-                newNumber
-            }),
+            fetch(url, {
+                method: 'PUT',
+                headers: {
+                    'content-type': 'application/json',
+                },
+                body: JSON.stringify({
+                    newNumber
+                }),
 
-        })
-            .then((response) => response.json())
-            .then((json) => console.log(json));
-        event.target.reset()
+            })
+                .then((response) => response.json())
+                .then((json) => console.log(json));
+            event.target.reset()
+        } else {
+            return toast('Please enter positive numbers!')
+        }
     }
 
     // Import button functionality added
     const updateQuantity = () => {
         const updatedQuantity = quantity - 1
-        const url = `https://salty-mountain-12795.herokuapp.com/bikes/${id}`
+        if (updatedQuantity >= 0) {
+            const url = `https://salty-mountain-12795.herokuapp.com/bikes/${id}`
 
-        fetch(url, {
-            method: 'PATCH',
-            headers: {
-                'content-type': 'application/json',
-            },
-            body: JSON.stringify({
-                updatedQuantity
-            }),
+            fetch(url, {
+                method: 'PATCH',
+                headers: {
+                    'content-type': 'application/json',
+                },
+                body: JSON.stringify({
+                    updatedQuantity
+                }),
 
-        })
-            .then((response) => response.json())
-            .then((json) => console.log(json));
+            })
+                .then((response) => response.json())
+                .then((json) => console.log(json));
+        } else {
+            toast('Your stock is empty')
+        }
     }
 
     return (
