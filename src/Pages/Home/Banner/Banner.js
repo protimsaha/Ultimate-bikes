@@ -15,8 +15,8 @@ const Banner = () => {
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <h3>HARLEY DEVIDSON</h3>
+                    <p>One of our biggest motorcycle supplier.There are more than 30 companies</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -27,8 +27,8 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3>OUR HUGE INVENTORY INTERIOR</h3>
+                    <p>Our every inventory is more than 1000sq feet interior.Its safe and secured and always under CCTV</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -39,8 +39,8 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    <h3>OUR CORPORATE OFFICE</h3>
+                    <p>We have our main corporate office near our warehouse.You will find every official service in this office. This is one stop service.</p>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
