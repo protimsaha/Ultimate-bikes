@@ -12,7 +12,7 @@ const MyItem = () => {
 
     useEffect(() => {
         const getItem = async () => {
-            const url = `http://localhost:5000/items?email=${email}`
+            const url = `https://salty-mountain-12795.herokuapp.com/items?email=${email}`
             try {
                 const { data } = await axios.get(url, {
                     headers: {
@@ -35,10 +35,10 @@ const MyItem = () => {
         const confirmDelete = window.confirm('Are you sure to cancle?')
         if (confirmDelete) {
             // delete from all data
-            axios.delete(`http://localhost:5000/bikes/${id}`)
+            axios.delete(`https://salty-mountain-12795.herokuapp.com/bikes/${id}`)
                 .then(res => console.log(res))
             // delete from myitem
-            axios.delete(`http://localhost:5000/items/${id}`)
+            axios.delete(`https://salty-mountain-12795.herokuapp.com/items/${id}`)
             //     .then(res => console.log(res))
         }
     }
