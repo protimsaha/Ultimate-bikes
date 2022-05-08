@@ -4,7 +4,7 @@ const useBrands = () => {
     const [brands, setBrands] = useState([])
 
     useEffect(() => {
-        fetch('https://salty-mountain-12795.herokuapp.com/bikes')
+        fetch('http://localhost:5000/bikes')
             .then(res => res.json())
             .then(data => setBrands(data))
     }, [])

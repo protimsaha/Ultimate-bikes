@@ -8,8 +8,6 @@ import useBrands from '../../Shared/useBrands/useBrands';
 const ManageInventory = () => {
     const [brands, setBrands] = useBrands()
 
-
-
     const handleDelete = id => {
         const confirm = window.confirm('Are you sure to delete?')
         if (confirm) {
