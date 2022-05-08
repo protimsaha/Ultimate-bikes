@@ -13,7 +13,7 @@ const AddNewItem = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = (data, event) => {
-        axios.post('http://localhost:5000/bikes', data)
+        axios.post('https://salty-mountain-12795.herokuapp.com/bikes', data)
             .then(response => {
                 const { data } = response;
                 if (data.insertedId) {
@@ -21,7 +21,7 @@ const AddNewItem = () => {
                     event.target.reset()
                 }
             })
-        axios.post('http://localhost:5000/items', data)
+        axios.post('https://salty-mountain-12795.herokuapp.com/items', data)
             .then(response => {
                 const { data } = response;
                 if (data.insertedId) {

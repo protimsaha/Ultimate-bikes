@@ -26,6 +26,7 @@ const Header = () => {
                         <div className="navbar-nav">
                             <Link className="my-link" aria-current="page" to="/">Home</Link>
                             <Link className="my-link" to="/inventory">Inventory</Link>
+                            <Link className='my-link' to='/blog'>Blogs</Link>
                             {
                                 user && <>
                                     <Link className="my-link" to="/manage-inventory">Manage Inventory</Link>

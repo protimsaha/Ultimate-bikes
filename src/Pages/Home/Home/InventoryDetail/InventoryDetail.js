@@ -11,7 +11,7 @@ const InventoryDetail = () => {
 
     // Fetch data to get product detail by id
     useEffect(() => {
-        const url = `http://localhost:5000/bikes/${id}`
+        const url = `https://salty-mountain-12795.herokuapp.com/bikes/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -25,7 +25,7 @@ const InventoryDetail = () => {
         event.preventDefault()
         const number = event.target.number.value;
         const newNumber = Number(number) + (quantity)
-        const url = `http://localhost:5000/bikes/${id}`
+        const url = `https://salty-mountain-12795.herokuapp.com/bikes/${id}`
 
         fetch(url, {
             method: 'PUT',
@@ -45,7 +45,7 @@ const InventoryDetail = () => {
     // Import button functionality added
     const updateQuantity = () => {
         const updatedQuantity = quantity - 1
-        const url = `http://localhost:5000/bikes/${id}`
+        const url = `https://salty-mountain-12795.herokuapp.com/bikes/${id}`
 
         fetch(url, {
             method: 'PATCH',
