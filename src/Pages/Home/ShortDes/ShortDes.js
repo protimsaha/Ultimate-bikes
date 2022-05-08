@@ -18,8 +18,8 @@ const ShortDes = () => {
                 <div className='row'>
                     <div className=" col-md-6 col-sm-12 d-flex align-items-center justify-content-center ">
                         <div>
-                            <h2 className='text-white ps-2'>THE TWO WHEEELR WORLD</h2>
-                            <p className='text-white ps-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolore molestias quae, aliquid id nam blanditiis vero odit cum architecto aspernatur sed totam corrupti vel? Facilis culpa officia debitis magni!</p>
+                            <h2 className='text-white ps-2'>THE ULTIMATE BIKES WORLD</h2>
+                            <p className='text-white ps-2'>Ultimate bikes is a motorbike inventory warehouse since 2000 . We import the best brand motorbikes all around the world and distribute to other showrooms. Our customers are are pleased by working with us. We have the top latest technology to store and destribute Bikes and sphares.Dedicated team support is our passion. You are welcome to start your business from here.We will support your till our potential</p>
                         </div>
                     </div>
                     <div className="col-md-6 des-img col-sm-12">

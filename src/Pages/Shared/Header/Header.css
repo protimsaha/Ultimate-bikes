@@ -7,8 +7,12 @@
     margin-bottom: 15px;
 }
 
+.my-nav {
+    background-color: rgb(250, 80, 80);
+}
+
 .my-link:hover {
-    color: darkorange;
+    color: darkblue;
     text-decoration: underline;
 }
 
@@ -40,14 +44,14 @@
     margin-top: 10px;
     margin-bottom: 15px;
     text-decoration: none;
-    background-color: darkorange;
+    background-color: rgb(34, 19, 134);
     padding: 5px 8px;
-    color: black;
+    color: white;
     width: 80px;
     border-radius: 12px;
 }
 
 .logout-btn:hover {
-    background-color: rgb(34, 19, 134);
+    background-color: rgb(248, 130, 27);
     color: white
 }

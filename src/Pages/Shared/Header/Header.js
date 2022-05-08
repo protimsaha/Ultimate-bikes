@@ -11,7 +11,7 @@ const Header = () => {
 
 
     return (
-        <nav className="navbar navbar-expand-lg  navbar-light ">
+        <nav className="navbar navbar-expand-lg my-nav navbar-light ">
             <div className="container d-flex justify-content-between">
                 <div>
                     <Link className="navbar-brand" to="/">
