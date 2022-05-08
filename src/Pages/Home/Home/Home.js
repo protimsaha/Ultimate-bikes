@@ -41,6 +41,7 @@ const Home = () => {
                         </div>)
                 }
             </div>
+            {/* I used react leaflet as my extra part of my home */}
             <ReactLeaflet></ReactLeaflet>
         </>
     );
